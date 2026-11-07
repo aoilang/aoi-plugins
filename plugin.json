@@ -1,0 +1,39 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "aoi-grammar-cards",
+  "version": "0.1.0",
+  "description": "Save 小葵（Aoi） English grammar corrections as cards and review them with ChatGPT.",
+  "author": {
+    "name": "Hao"
+  },
+  "license": "MIT",
+  "keywords": [
+    "english",
+    "learning",
+    "grammar",
+    "flashcards",
+    "study"
+  ],
+  "extensions": {
+    "com.openai": {
+      "interface": {
+        "displayName": "Aoi Grammar Cards",
+        "shortDescription": "Save English grammar cards.",
+        "longDescription": "The 小葵（Aoi） Grammar Cards skill notices meaningful grammar issues in your English, saves them as cards on your account, and shows the correction in the reply. Every saved card is grouped by grammar pattern, and the same grouped view is available in the conversation panel and the ChatGPT sidebar.",
+        "developerName": "Hao",
+        "category": "Productivity",
+        "capabilities": [
+          "Read",
+          "Write"
+        ],
+        "composerIcon": "./assets/icon.svg",
+        "logo": "./assets/icon.svg",
+        "defaultPrompt": [
+          "Open my grammar cards.",
+          "Review the English corrections from this chat.",
+          "Save the grammar corrections from my last message."
+        ]
+      }
+    }
+  }
+}
