@@ -3,18 +3,7 @@
   "mcpServers": {
     "aoi-grammar-cards": {
       "type": "streamable-http",
-      "url": "https://aoilang.com/grammar/mcp",
-      "extensions": {
-        "com.openai": {
-          "auth": {
-            "type": "oauth",
-            "client": {
-              "mode": "dcr"
-            },
-            "baseScopes": ["grammar:read", "grammar:write"]
-          }
-        }
-      }
+      "url": "https://aoilang.com/grammar/mcp"
     }
   }
 }

@@ -1,8 +1,8 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "aoi-grammar-cards",
-  "version": "0.1.0",
-  "description": "Save 小葵（Aoi） English grammar corrections as cards and review them with ChatGPT.",
+  "version": "0.2.0",
+  "description": "Save 小葵（Aoi） English grammar corrections as cards and review them in ChatGPT, Grok Bot, and other Agent Plugins hosts.",
   "author": {
     "name": "Hao"
   },
@@ -12,14 +12,16 @@
     "learning",
     "grammar",
     "flashcards",
-    "study"
+    "study",
+    "grok-bot",
+    "mcp"
   ],
   "extensions": {
     "com.openai": {
       "interface": {
         "displayName": "Aoi Grammar Cards",
         "shortDescription": "Save English grammar cards.",
-        "longDescription": "The 小葵（Aoi） Grammar Cards skill notices meaningful grammar issues in your English, saves them as cards on your account, and shows the correction in the reply. Every saved card is grouped by grammar pattern, and the same grouped view is available in the conversation panel and the ChatGPT sidebar.",
+        "longDescription": "The 小葵（Aoi） Grammar Cards skill notices meaningful grammar issues in your English, saves them as cards on your account, and shows the correction in the reply. Every saved card is grouped by grammar pattern, and the same grouped view is available in the conversation panel and host sidebars that support MCP Apps.",
         "developerName": "Hao",
         "category": "Productivity",
         "capabilities": [

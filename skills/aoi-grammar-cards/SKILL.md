@@ -22,7 +22,7 @@ the panel from the cards you pass, before the save returns, so do not also call
 `show_english_learning_cards` for the same cards. This applies to every message
 that contains the learner's own English, including one-line replies: do not wait
 to be asked for feedback. The same panel is available
-from the ChatGPT sidebar and thread panel.
+from the host sidebar and thread panel when those surfaces exist.
 
 ### Grouping
 
@@ -83,8 +83,8 @@ must not stop the user's task.
 saves. Call `show_english_learning_cards` with no arguments only when the user
 asks to review the library or open the panel again; never call it right after
 saving the same cards, or the conversation gets two panels. The same panel can
-be opened from the ChatGPT sidebar and the thread panel. Keep the reply focused
-on the task and do not repeat the card contents.
+be opened from the host sidebar and thread panel when those surfaces exist.
+Keep the reply focused on the task and do not repeat the card contents.
 
 If the host does not render the panel, show the fallback note at the top of the
 reply, before the answer. Show the corrected sentence once, then list every
