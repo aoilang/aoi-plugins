@@ -2,7 +2,7 @@
 
 [English](README.md) | **中文**
 
-把对话里的英文语法问题变成学习卡片，保存在你的 [小葵（Aoi）](https://aoilang.com) 账号里。可用于 ChatGPT、Grok Bot、Cursor 以及其他支持 [Agent Plugins](https://agent-plugins.org) / MCP 的客户端。
+把对话里的英文语法问题变成学习卡片，保存在你的 [小葵（Aoi）](https://aoilang.com) 账号里。可用于 Claude Code、ChatGPT、Grok Bot、Cursor 以及其他支持 [Agent Plugins](https://agent-plugins.org) / MCP 的客户端。
 
 用英文聊天时，模型会发现值得学习的语法问题、保存成卡片，并在对话里展示互动卡组。同一批卡片也可以在网页复习：[aoilang.com/grammar/review](https://aoilang.com/grammar/review/)。
 
@@ -21,12 +21,25 @@
 
 优先把**本目录安装为插件**（支持 Agent Plugins 的客户端）：这样会加载 [`skills/aoi-grammar-cards`](skills/aoi-grammar-cards/SKILL.md)，模型才知道**什么时候**该存卡。如果只添加 MCP 地址，服务端也会下发用法说明，但很多客户端会忽略——请贴上下面的[自定义说明](#让卡片稳定出现)。
 
+### Claude Code
+
+先把本仓库添加为插件市场，再安装插件：
+
+```text
+/plugin marketplace add aoilang/english-cards
+/plugin install aoi-grammar-cards@aoi-plugins
+```
+
+插件会加载技能并连接托管的 MCP 服务，无需再贴自定义说明。第一次调用工具时会在浏览器里打开 OAuth 登录。
+
 ### ChatGPT
 
 1. 打开 **Plugins → Add custom MCP server**（需开发者模式）。
 2. 填入 `https://aoilang.com/grammar/mcp`。
 3. 创建为插件并完成 **OAuth**。
 4. 加上[自定义说明](#让卡片稳定出现)，才会在每条英文消息里自动存卡。
+
+ChatGPT 桌面端和 Codex 也可以把本仓库加为本地插件市场（`codex plugin marketplace add aoilang/english-cards`），读的是同一个 `.claude-plugin/marketplace.json`。网页版 ChatGPT 不支持从仓库安装，请使用 MCP 地址或已发布的插件目录。
 
 ### Grok Bot / Codex / 其他 Agent Plugins 客户端
 

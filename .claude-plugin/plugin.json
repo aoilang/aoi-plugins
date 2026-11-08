@@ -1,0 +1,19 @@
+{
+  "name": "aoi-grammar-cards",
+  "version": "0.2.0",
+  "description": "Notices meaningful English grammar mistakes, saves them as 小葵（Aoi） cards, and shows the correction in the reply.",
+  "author": {
+    "name": "Hao"
+  },
+  "homepage": "https://aoilang.com/grammar/review/",
+  "repository": "https://github.com/aoilang/english-cards",
+  "license": "MIT",
+  "keywords": [
+    "english",
+    "learning",
+    "grammar",
+    "flashcards",
+    "study",
+    "mcp"
+  ]
+}
