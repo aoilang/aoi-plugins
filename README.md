@@ -1,76 +1,51 @@
-# Aoi Grammar Cards
+# Aoi Plugins
 
-**English** | [中文](README.cn.md)
+A marketplace catalog for [小葵（Aoi）](https://aoilang.com) plugins — portable [Agent Plugins](https://agent-plugins.org) for Claude Code, ChatGPT/Codex, and other MCP hosts.
 
-Turn English grammar mistakes in chat into study cards on your [小葵（Aoi）](https://aoilang.com) account. Compatible with Claude Code, ChatGPT, Grok Bot, Cursor, and other [Agent Plugins](https://agent-plugins.org) / MCP hosts.
+## Plugins
 
-While you chat in English, the model notices useful grammar issues, saves them as cards, and can show an interactive deck in the conversation. The same cards are also available on the web at [aoilang.com/grammar/review](https://aoilang.com/grammar/review/).
-
-## What you get
-
-- **Auto-capture** — meaningful grammar issues from your messages become cards (typos are ignored)
-- **Grouped by sentence** — each card group shows the corrected sentence, then the pattern, rule, and example
-- **Interactive deck** — search and review cards in the chat panel (where the host supports MCP Apps)
-- **Synced to Aoi** — cards live on your Aoi account, not only in one chat
-
-Inside a correction, removed words use `~~strikethrough~~` and replacements use `**bold**`.
+| Plugin | Best for | What it does |
+| --- | --- | --- |
+| [English Cards](plugins/english-cards/README.md) (`aoi-grammar-cards`) | Claude Code, ChatGPT/Codex, Grok Bot, Cursor | Turns English grammar mistakes in chat into review cards and save to your Aoi account. |
 
 ## Install
 
-You need a free [Aoi](https://aoilang.com) account. The first tool call opens OAuth so you can sign in.
-
-Prefer installing **this folder as a plugin** when the host supports Agent Plugins: that loads [`skills/aoi-grammar-cards`](skills/aoi-grammar-cards/SKILL.md), which tells the model *when* to save cards. If you only add the MCP URL, the server still sends usage instructions, but many hosts ignore them — paste the [custom instructions](#make-cards-appear-reliably) below.
-
 ### Claude Code
 
-Add this repository as a plugin marketplace, then install the plugin:
-
 ```text
-/plugin marketplace add aoilang/english-cards
+/plugin marketplace add aoilang/aoi-plugins
 /plugin install aoi-grammar-cards@aoi-plugins
 ```
 
-The plugin loads the skill and the hosted MCP server, so cards are captured without extra instructions. The first tool call opens OAuth in your browser.
+### ChatGPT desktop / Codex
 
-### ChatGPT
-
-1. Open **Plugins → Add custom MCP server** (developer mode).
-2. Enter `https://aoilang.com/grammar/mcp`.
-3. Create as a plugin and finish **OAuth**.
-4. Add the [custom instructions](#make-cards-appear-reliably) so cards save on every English message.
-
-ChatGPT desktop and Codex can also add this repository as a local marketplace (`codex plugin marketplace add aoilang/english-cards`); they read the same `.claude-plugin/marketplace.json`. Web ChatGPT has no repo-based install, so use the MCP server or a published directory listing there.
-
-### Grok Bot / Codex / other Agent Plugins hosts
-
-Install this folder as a plugin (recommended), or add the MCP URL `https://aoilang.com/grammar/mcp`. Authenticate when prompted, then attach the plugin with `@` if your host requires it. With MCP-only setup, also add the [custom instructions](#make-cards-appear-reliably).
-
-### Cursor
-
-Add a custom MCP server pointing at `https://aoilang.com/grammar/mcp`, then complete OAuth. Add the [custom instructions](#make-cards-appear-reliably) (or a user rule with the same text). You can also ask “show english cards” or “list english cards”.
-
-## Make cards appear reliably
-
-Paste this into the host’s custom instructions / user rules (ChatGPT: **Settings → Personalization → Custom instructions**):
-
-```text
-Before you answer, check my English for clear grammar mistakes worth learning
-(ignore typos and style). If you find any, call create_english_learning_cards
-first with the corrections, then continue with my request. Do not call
-show_english_learning_cards right after saving. If there is nothing to teach,
-skip the grammar tools.
+```bash
+codex plugin marketplace add aoilang/aoi-plugins
 ```
 
-## Use
+Restart the ChatGPT desktop app, open the Plugins Directory, choose **Aoi Plugins**, and install **English Cards**. In Codex you can install from the CLI instead:
 
-Chat in English as usual. When there is something worth learning, the model saves cards and can open the deck. You can also ask:
+```bash
+codex plugin add aoi-grammar-cards@aoi-plugins
+```
 
-- “Open my grammar cards.”
-- “Review the English corrections from this chat.”
-- “Save the grammar corrections from my last message.”
+Web ChatGPT has no repo-based install: add the plugin's MCP server or install the published listing. See the [English Cards README](plugins/english-cards/README.md).
 
-Review everything on the web anytime: [aoilang.com/grammar/review](https://aoilang.com/grammar/review/).
+### Direct folder install
 
+Hosts that install a plugin folder directly can point at [`plugins/english-cards/`](plugins/english-cards/).
+
+## Layout
+
+```text
+.claude-plugin/marketplace.json   catalog, read by Claude Code, ChatGPT desktop, and Codex
+plugins/english-cards/            the English Cards plugin package
+├── plugin.json                   portable Agent Plugins manifest
+├── .claude-plugin/plugin.json    Claude Code manifest
+├── mcp.json / .mcp.json          hosted MCP server
+├── skills/aoi-grammar-cards/     when to save cards
+└── assets/
+```
 
 ## License
 

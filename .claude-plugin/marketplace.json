@@ -4,21 +4,21 @@
     "name": "Hao",
     "url": "https://aoilang.com"
   },
-  "description": "小葵（Aoi） plugins for Claude Code — save English grammar corrections as review cards.",
+  "description": "小葵（Aoi） plugins for Claude Code and ChatGPT — save English grammar corrections as review cards.",
   "metadata": {
-    "description": "小葵（Aoi） plugins for Claude Code — save English grammar corrections as review cards."
+    "description": "小葵（Aoi） plugins for Claude Code and ChatGPT — save English grammar corrections as review cards."
   },
   "plugins": [
     {
       "name": "aoi-grammar-cards",
-      "source": "./",
+      "source": "./plugins/english-cards",
       "description": "Notices meaningful English grammar mistakes, saves them as 小葵（Aoi） cards, and shows the correction in the reply.",
       "version": "0.2.0",
       "author": {
         "name": "Hao"
       },
       "homepage": "https://aoilang.com/grammar/review/",
-      "repository": "https://github.com/aoilang/english-cards",
+      "repository": "https://github.com/aoilang/aoi-plugins",
       "license": "MIT",
       "keywords": [
         "english",

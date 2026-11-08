@@ -6,6 +6,8 @@
   "author": {
     "name": "Hao"
   },
+  "homepage": "https://aoilang.com/grammar/review/",
+  "repository": "https://github.com/aoilang/aoi-plugins",
   "license": "MIT",
   "keywords": [
     "english",
