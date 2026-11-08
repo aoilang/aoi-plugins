@@ -8,6 +8,12 @@
 | --- | --- | --- |
 | [English Cards](plugins/english-cards/README.cn.md)（`aoi-grammar-cards`） | Claude Code、ChatGPT/Codex、Grok Bot、Cursor | 把对话里的英文语法问题变成复习卡片，并且保存到小葵账号里 |
 
+## 预览
+
+![ChatGPT 侧边栏里展开的 English Cards 卡组](plugins/english-cards/docs/screenshots/chatgpt-sidebar.webp)
+
+卡组在 ChatGPT 侧边栏展开；Cursor 和网页版预览见 [插件说明](plugins/english-cards/README.cn.md)。
+
 ## 安装
 
 ### Claude Code

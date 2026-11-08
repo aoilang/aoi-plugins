@@ -15,6 +15,17 @@ While you chat in English, the model notices useful grammar issues, saves them a
 
 Inside a correction, removed words use `~~strikethrough~~` and replacements use `**bold**`.
 
+## Preview
+
+| ChatGPT | Cursor |
+| --- | --- |
+| ![English Cards in the ChatGPT sidebar](docs/screenshots/chatgpt-sidebar.webp) | ![English Cards in Cursor](docs/screenshots/cursor.webp) |
+| The deck opens in ChatGPT's sidebar. | The panel renders inside the Cursor chat. |
+
+![Grammar review on the web](docs/screenshots/grammar-review.webp)
+
+Every card is also at [aoilang.com/grammar/review](https://aoilang.com/grammar/review/).
+
 ## Install
 
 You need a free [Aoi](https://aoilang.com) account. The first tool call opens OAuth so you can sign in.

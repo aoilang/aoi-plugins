@@ -6,7 +6,13 @@ A marketplace catalog for [小葵（Aoi）](https://aoilang.com) plugins — por
 
 | Plugin | Best for | What it does |
 | --- | --- | --- |
-| [English Cards](plugins/english-cards/README.md) (`aoi-grammar-cards`) | Claude Code, ChatGPT/Codex, Grok Bot, Cursor | Turns English grammar mistakes in chat into review cards and save to your Aoi account. |
+| [English Cards](plugins/english-cards/README.md) (`aoi-grammar-cards`) | Claude Code, ChatGPT/Codex, Grok Bot, Cursor | Turns English grammar mistakes in chat into review cards saved to your Aoi account. |
+
+## Preview
+
+![English Cards in ChatGPT, with the deck open in the sidebar](plugins/english-cards/docs/screenshots/chatgpt-sidebar.webp)
+
+The deck opens in ChatGPT's sidebar. The [plugin README](plugins/english-cards/README.md) has Cursor and web previews.
 
 ## Install
 
@@ -44,6 +50,7 @@ plugins/english-cards/            the English Cards plugin package
 ├── .claude-plugin/plugin.json    Claude Code manifest
 ├── mcp.json / .mcp.json          hosted MCP server
 ├── skills/aoi-grammar-cards/     when to save cards
+├── docs/screenshots/             README previews
 └── assets/
 ```
 

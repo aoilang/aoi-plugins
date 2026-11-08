@@ -13,6 +13,16 @@
 - **互动卡组** — 在支持 MCP Apps 的客户端里可搜索、回顾
 - **同步到小葵** — 卡片存在你的小葵账号，不只留在某一次对话里
 
+## 预览
+
+| ChatGPT | Cursor |
+| --- | --- |
+| ![ChatGPT 侧边栏里的 English Cards](docs/screenshots/chatgpt-sidebar.webp) | ![Cursor 里的 English Cards](docs/screenshots/cursor.webp) |
+| 卡组在 ChatGPT 侧边栏展开。 | 面板直接渲染在 Cursor 对话里。 |
+
+![网页版语法卡片复习](docs/screenshots/grammar-review.webp)
+
+所有卡片也会同步到 [aoilang.com/grammar/review](https://aoilang.com/grammar/review/)。
 
 ## 安装
 
