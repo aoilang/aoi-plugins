@@ -15,14 +15,9 @@
 
 ## 预览
 
-| ChatGPT | Cursor |
-| --- | --- |
-| ![ChatGPT 侧边栏里的 English Cards](docs/screenshots/chatgpt-sidebar.webp) | ![Cursor 里的 English Cards](docs/screenshots/cursor.webp) |
-| 卡组在 ChatGPT 侧边栏展开。 | 面板直接渲染在 Cursor 对话里。 |
+![ChatGPT 侧边栏里的 English Cards](docs/screenshots/chatgpt.png)
 
-![网页版语法卡片复习](docs/screenshots/grammar-review.webp)
-
-所有卡片也会同步到 [aoilang.com/grammar/review](https://aoilang.com/grammar/review/)。
+卡组在 ChatGPT 侧边栏展开。所有卡片也会同步到 [aoilang.com/grammar/review](https://aoilang.com/grammar/review/)。
 
 ## 安装
 
@@ -43,10 +38,10 @@
 
 ### ChatGPT
 
-1. 打开 **Plugins → Add custom MCP server**（需开发者模式）。
+1. 打开 **Plugins → Add custom MCP server**。
 2. 填入 `https://aoilang.com/grammar/mcp`。
 3. 创建为插件并完成 **OAuth**。
-4. 加上[自定义说明](#让卡片稳定出现)，才会在每条英文消息里自动存卡。
+4. 加上[自定义prompt](#自定义prompt)，才会在每条英文消息里自动存卡。
 
 ChatGPT 桌面端和 Codex 也可以把本仓库加为本地插件市场（`codex plugin marketplace add aoilang/aoi-plugins`），读的是仓库根目录的 `.claude-plugin/marketplace.json`。网页版 ChatGPT 不支持从仓库安装，请使用 MCP 地址或已发布的插件目录。
 
@@ -56,9 +51,9 @@ ChatGPT 桌面端和 Codex 也可以把本仓库加为本地插件市场（`code
 
 ### Cursor
 
-添加自定义 MCP，地址为 `https://aoilang.com/grammar/mcp`，完成 OAuth。再添加[自定义说明](#让卡片稳定出现)（或写成一条 user rule）。也可以说「show english cards」或「list english cards」。
+添加自定义 MCP，地址为 `https://aoilang.com/grammar/mcp`，完成 OAuth。再添加[自定义prompt](#自定义prompt)（或写成一条 user rule）。也可以说「show english cards」或「list english cards」。
 
-## 让卡片稳定出现
+## 自定义prompt
 
 把下面这段贴进客户端的自定义说明 / 用户规则（ChatGPT：**Settings → Personalization → Custom instructions**）：
 

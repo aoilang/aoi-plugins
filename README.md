@@ -10,9 +10,9 @@ A marketplace catalog for [小葵（Aoi）](https://aoilang.com) plugins — por
 
 ## Preview
 
-![English Cards in ChatGPT, with the deck open in the sidebar](plugins/english-cards/docs/screenshots/chatgpt-sidebar.webp)
+![English Cards in ChatGPT, with the deck open in the sidebar](plugins/english-cards/docs/screenshots/chatgpt.png)
 
-The deck opens in ChatGPT's sidebar. The [plugin README](plugins/english-cards/README.md) has Cursor and web previews.
+The deck opens in ChatGPT's sidebar.
 
 ## Install
 
@@ -35,24 +35,12 @@ Restart the ChatGPT desktop app, open the Plugins Directory, choose **Aoi Plugin
 codex plugin add aoi-grammar-cards@aoi-plugins
 ```
 
-Web ChatGPT has no repo-based install: add the plugin's MCP server or install the published listing. See the [English Cards README](plugins/english-cards/README.md).
 
 ### Direct folder install
 
 Hosts that install a plugin folder directly can point at [`plugins/english-cards/`](plugins/english-cards/).
 
-## Layout
 
-```text
-.claude-plugin/marketplace.json   catalog, read by Claude Code, ChatGPT desktop, and Codex
-plugins/english-cards/            the English Cards plugin package
-├── plugin.json                   portable Agent Plugins manifest
-├── .claude-plugin/plugin.json    Claude Code manifest
-├── mcp.json / .mcp.json          hosted MCP server
-├── skills/aoi-grammar-cards/     when to save cards
-├── docs/screenshots/             README previews
-└── assets/
-```
 
 ## License
 

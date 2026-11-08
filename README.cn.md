@@ -10,9 +10,9 @@
 
 ## 预览
 
-![ChatGPT 侧边栏里展开的 English Cards 卡组](plugins/english-cards/docs/screenshots/chatgpt-sidebar.webp)
+![ChatGPT 侧边栏里展开的 English Cards 卡组](plugins/english-cards/docs/screenshots/chatgpt.png)
 
-卡组在 ChatGPT 侧边栏展开；Cursor 和网页版预览见 [插件说明](plugins/english-cards/README.cn.md)。
+卡组在 ChatGPT 侧边栏展开。
 
 ## 安装
 
@@ -35,7 +35,6 @@ codex plugin marketplace add aoilang/aoi-plugins
 codex plugin add aoi-grammar-cards@aoi-plugins
 ```
 
-网页版 ChatGPT 不支持从仓库安装：请添加插件的 MCP 地址，或安装已发布的插件目录。详见 [English Cards 说明](plugins/english-cards/README.cn.md)。
 
 ### 直接安装插件目录
 

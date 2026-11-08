@@ -17,14 +17,9 @@ Inside a correction, removed words use `~~strikethrough~~` and replacements use 
 
 ## Preview
 
-| ChatGPT | Cursor |
-| --- | --- |
-| ![English Cards in the ChatGPT sidebar](docs/screenshots/chatgpt-sidebar.webp) | ![English Cards in Cursor](docs/screenshots/cursor.webp) |
-| The deck opens in ChatGPT's sidebar. | The panel renders inside the Cursor chat. |
+![English Cards in the ChatGPT sidebar](docs/screenshots/chatgpt.png)
 
-![Grammar review on the web](docs/screenshots/grammar-review.webp)
-
-Every card is also at [aoilang.com/grammar/review](https://aoilang.com/grammar/review/).
+The deck opens in ChatGPT's sidebar. Every card is also at [aoilang.com/grammar/review](https://aoilang.com/grammar/review/).
 
 ## Install
 
