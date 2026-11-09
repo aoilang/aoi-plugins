@@ -1,20 +1,28 @@
 # Aoi Plugins
 
-A marketplace catalog for [小葵（Aoi）](https://aoilang.com) plugins — portable [Agent Plugins](https://agent-plugins.org) for Claude Code, ChatGPT/Codex, and other MCP hosts.
+**中文** | [English](README.en.md)
 
-## Plugins
+[小葵（Aoi）](https://aoilang.com) 的插件市场：为 Claude Code、ChatGPT/Codex 以及其他 MCP 客户端提供可移植的 [Agent Plugins](https://agent-plugins.org)。
 
-| Plugin | Best for | What it does |
+## 插件
+
+| 插件 | 适用 | 作用 |
 | --- | --- | --- |
-| [English Cards](plugins/english-cards/README.md) (`aoi-grammar-cards`) | Claude Code, ChatGPT/Codex, Grok Bot, Cursor | Turns English grammar mistakes in chat into review cards saved to your Aoi account. |
+| [English Cards](plugins/english-cards/README.md)（`aoi-grammar-cards`） | Claude Code、ChatGPT/Codex、Grok Bot、Cursor | 自动检测和AI对话时的英文语法问题，并保存成复习卡片 |
 
-## Preview
+## 预览
+ ChatGPT 侧边栏展示所有卡片
+![ChatGPT 侧边栏里展开的 English Cards 卡组](plugins/english-cards/docs/screenshots/chatgpt.png)
 
-![English Cards in ChatGPT, with the deck open in the sidebar](plugins/english-cards/docs/screenshots/chatgpt.png)
 
-The deck opens in ChatGPT's sidebar.
 
-## Install
+## 安装
+
+### 优先自动安装，复制粘贴到你的AI Agent
+
+```text
+从 aoilang/aoi-plugins 安装 aoi-grammar-cards 插件
+```
 
 ### Claude Code
 
@@ -23,25 +31,22 @@ The deck opens in ChatGPT's sidebar.
 /plugin install aoi-grammar-cards@aoi-plugins
 ```
 
-### ChatGPT desktop / Codex
+### ChatGPT 桌面端 / Codex
 
 ```bash
 codex plugin marketplace add aoilang/aoi-plugins
-```
-
-Restart the ChatGPT desktop app, open the Plugins Directory, choose **Aoi Plugins**, and install **English Cards**. In Codex you can install from the CLI instead:
-
-```bash
 codex plugin add aoi-grammar-cards@aoi-plugins
 ```
 
+## MCP 服务器
 
-### Direct folder install
+默认安装完后会自动跳转到浏览器完成OAuth验证，如果没有跳转，需要手动添加MCP服务器,并完成登录验证
 
-Hosts that install a plugin folder directly can point at [`plugins/english-cards/`](plugins/english-cards/).
+```text
+https://aoilang.com/grammar/mcp/
+```
 
 
+## 许可
 
-## License
-
-MIT — see [LICENSE](LICENSE).
+MIT — 见 [LICENSE](LICENSE)。

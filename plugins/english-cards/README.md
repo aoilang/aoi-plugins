@@ -1,63 +1,60 @@
-# Aoi Grammar Cards
+# 小葵语法卡片
 
-**English** | [中文](README.cn.md)
+**中文** | [English](README.en.md)
 
-Turn English grammar mistakes in chat into study cards on your [小葵（Aoi）](https://aoilang.com) account. Compatible with Claude Code, ChatGPT, Grok Bot, Cursor, and other [Agent Plugins](https://agent-plugins.org) / MCP hosts.
+想提高英语吗？那就把你的英语用起来。和Agent交互是最好的使用英语的机会，它占据了我们大部分的日常时间，也能够理解我们不那么准确的表达。
 
-While you chat in English, the model notices useful grammar issues, saves them as cards, and can show an interactive deck in the conversation. The same cards are also available on the web at [aoilang.com/grammar/review](https://aoilang.com/grammar/review/).
+为了激励你更多的使用英语沟通，插件提供自动识别语法问题功能，在Agent正常处理其他任务时，自动识别你句子里的语法问题，在用英语沟通时获得即时反馈，通过自己的错误来学习，切实感受到英语的提升。
 
-## What you get
+用英文聊天时，Agent会自动发现问题，并在当前对话里展示，如果Agent支持，也会有一个专门的侧边栏展示所有对话中的卡片。可用于 Claude Code、ChatGPT、Grok Bot、Cursor 以及其他支持 [Agent Plugins](https://agent-plugins.org) / MCP 的客户端。
 
-- **Auto-capture** — meaningful grammar issues from your messages become cards (typos are ignored)
-- **Grouped by sentence** — each card group shows the corrected sentence, then the pattern, rule, and example
-- **Interactive deck** — search and review cards in the chat panel (where the host supports MCP Apps)
-- **Synced to Aoi** — cards live on your Aoi account, not only in one chat
+## 功能
 
-Inside a correction, removed words use `~~strikethrough~~` and replacements use `**bold**`.
+- **自动收集** — 有学习价值的语法问题会变成卡片
+- **集中页面** — 在支持 MCP Apps 的客户端里可以提供搜索、回顾UI
+- **同步到小葵** — 卡片存在你的小葵账号，可以跨Agent同步，支持更丰富的练习
 
-## Preview
+## 预览
 
-![English Cards in the ChatGPT sidebar](docs/screenshots/chatgpt.png)
+![ChatGPT 侧边栏里的 English Cards](docs/screenshots/chatgpt.png)
 
-The deck opens in ChatGPT's sidebar. Every card is also at [aoilang.com/grammar/review](https://aoilang.com/grammar/review/).
+## 安装
 
-## Install
+需要一个免费的 [小葵](https://aoilang.com) 账号。第一次调用工具时会弹出 OAuth，按提示登录即可。
 
-You need a free [Aoi](https://aoilang.com) account. The first tool call opens OAuth so you can sign in.
+### 优先自动安装，复制粘贴到你的AI Agent
 
-Prefer installing **this folder as a plugin** when the host supports Agent Plugins: that loads [`skills/aoi-grammar-cards`](skills/aoi-grammar-cards/SKILL.md), which tells the model *when* to save cards. If you only add the MCP URL, the server still sends usage instructions, but many hosts ignore them — paste the [custom instructions](#make-cards-appear-reliably) below.
+```text
+从 aoilang/aoi-plugins 安装 aoi-grammar-cards 插件
+```
 
 ### Claude Code
-
-Add this repository as a plugin marketplace, then install the plugin:
 
 ```text
 /plugin marketplace add aoilang/aoi-plugins
 /plugin install aoi-grammar-cards@aoi-plugins
 ```
 
-The plugin loads the skill and the hosted MCP server, so cards are captured without extra instructions. The first tool call opens OAuth in your browser.
+### ChatGPT 桌面端 / Codex
 
-### ChatGPT
+```bash
+codex plugin marketplace add aoilang/aoi-plugins
+codex plugin add aoi-grammar-cards@aoi-plugins
+```
 
-1. Open **Plugins → Add custom MCP server** (developer mode).
-2. Enter `https://aoilang.com/grammar/mcp`.
-3. Create as a plugin and finish **OAuth**.
-4. Add the [custom instructions](#make-cards-appear-reliably) so cards save on every English message.
+## MCP 服务器
 
-ChatGPT desktop and Codex can also add this repository as a local marketplace (`codex plugin marketplace add aoilang/aoi-plugins`); they read the repo's `.claude-plugin/marketplace.json`. Web ChatGPT has no repo-based install, so use the MCP server or a published directory listing there.
+MCP服务由[小葵（Aoi）](https://aoilang.com) 提供，默认安装完后会自动跳转到浏览器完成OAuth验证，如果没有跳转，需要手动添加MCP服务器，并完成登录验证。
+MCP服务器地址：
 
-### Grok Bot / Codex / other Agent Plugins hosts
+```text
+https://aoilang.com/grammar/mcp/
+```
 
-Install this folder as a plugin (recommended), or add the MCP URL `https://aoilang.com/grammar/mcp`. Authenticate when prompted, then attach the plugin with `@` if your host requires it. With MCP-only setup, also add the [custom instructions](#make-cards-appear-reliably).
 
-### Cursor
+## 自定义prompt
 
-Add a custom MCP server pointing at `https://aoilang.com/grammar/mcp`, then complete OAuth. Add the [custom instructions](#make-cards-appear-reliably) (or a user rule with the same text). You can also ask “show english cards” or “list english cards”.
-
-## Make cards appear reliably
-
-Paste this into the host’s custom instructions / user rules (ChatGPT: **Settings → Personalization → Custom instructions**):
+为了让Agent主动的检查语法，可以把下面这段贴进客户端的自定义说明 / 用户规则（ChatGPT：**Settings → Personalization → Custom instructions**）：
 
 ```text
 Before you answer, check my English for clear grammar mistakes worth learning
@@ -67,17 +64,17 @@ show_english_learning_cards right after saving. If there is nothing to teach,
 skip the grammar tools.
 ```
 
-## Use
+## 使用
 
-Chat in English as usual. When there is something worth learning, the model saves cards and can open the deck. You can also ask:
+正常用英文对话即可。有值得学的语法点时，模型会保存卡片并可打开卡组。你也可以直接说：
 
-- “Open my grammar cards.”
-- “Review the English corrections from this chat.”
-- “Save the grammar corrections from my last message.”
+- 「Open my grammar cards.」
+- 「Review the English corrections from this chat.」
+- 「Save the grammar corrections from my last message.」
 
-Review everything on the web anytime: [aoilang.com/grammar/review](https://aoilang.com/grammar/review/).
+随时在网页复习全部卡片：[aoilang.com/grammar/review](https://aoilang.com/grammar/review/)。
 
 
-## License
+## 许可
 
-MIT — see [LICENSE](LICENSE).
+MIT — 见 [LICENSE](LICENSE)。
